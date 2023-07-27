@@ -16,7 +16,7 @@ button {
 body {
   min-height: 100vh;
   padding: 20px;
-  background-color: #3d84f6;
+  background-color: #2e975d;
 }
 
 .container {
@@ -84,7 +84,7 @@ body {
 
 .del_all {
   padding: 12px;
-  background-color: #3d84f6;
+  background-color: #11ba66;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
