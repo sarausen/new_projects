@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #3d84f6;
+}
+
+.container {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto 20px;
+}
+
+.task_list {
+  padding: 30px 30px 50px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.input_box {
+  margin-bottom: 35px;
+  position: relative;
+}
+.input_box input {
+  border-radius: 8px;
+  font-size: 1.24rem;
+  border: 2px solid #cdcccd;
+  display: block;
+  width: 100%;
+  padding: 10px 0px 10px 42px;
+  background-color: transparent;
+}
+
+.input_box input:focus {
+  border: 2px solid #3d84f6;
+  transition: 0.5s ease;
+}
+.input_box input::placeholder {
+  font-size: 1.17rem;
+}
+.input_box::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f0ca";
+  position: absolute;
+  color: #cdcccd;
+  top: 50%;
+  font-size: 1.1rem;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sections h4 {
+  user-select: none;
+  color: #ada5a5;
+  cursor: pointer;
+}
+.sections .active {
+  color: #3d84f6;
+}
+
+.del_all {
+  padding: 12px;
+  background-color: #3d84f6;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tasks {
+  margin-top: 15px;
+  list-style: none;
+}
+.tasks .task {
+  gap: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  user-select: none;
+  justify-content: right;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+}
+.task .edit {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.task button {
+  font-size: 1.2rem;
+}
+.edit::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f044";
+  font-size: 1.25rem;
+  margin-right: 7px;
+}
+.remove {
+  cursor: pointer;
+}
+.remove i {
+  font-size: 1.25rem;
+}
+.title::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0c8";
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
+.done span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.done::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f14a";
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
+@media (max-width: 376px) {
+  .task {
+    justify-content: right;
+  }
+  .title {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+  .task,
+  .edit,
+  .remove {
+    font-size: 1.15rem !important;
+  }
+  ::before {
+    font-size: 1.15rem !important;
+  }
+  .edit {
+    margin-right: 3px !important;
+  }
+}
+
+
+
